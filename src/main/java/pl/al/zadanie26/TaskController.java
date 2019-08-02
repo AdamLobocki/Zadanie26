@@ -33,6 +33,7 @@ public class TaskController {
         List<Task> tasks = query.getResultList();
         model.addAttribute("tasks", tasks);
         model.addAttribute("taskToAdd", new Task());
+        entityManager.close();
 
         return "home";
     }
@@ -43,6 +44,8 @@ public class TaskController {
         entityManager.getTransaction().begin();
         entityManager.persist(task);
         entityManager.getTransaction().commit();
+        entityManager.close();
+
         return "redirect:/";
     }
 

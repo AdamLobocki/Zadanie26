@@ -69,7 +69,7 @@
 
 <form th:action="@{/edit}" method="get" th:object="${taskToEdit}">
 
-    <input type="text" th:field="*{id}" placeholder="Numer"/> <br/>
+    <input type="hidden" th:field="*{id}" placeholder="Numer"/> <br/>
 
     <input type="submit" value="Dodaj">
 
