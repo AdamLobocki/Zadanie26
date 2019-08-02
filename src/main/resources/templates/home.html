@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Zadania</title>
     <style type="text/css">
-        span{
+        span {
             font-size: 12px;
         }
     </style>
@@ -14,13 +14,13 @@
 <ul>
     <li th:each="task: ${tasks}">
         <a th:text="${task.name}"></a>
-        .   Termin ukończenia:
+        . Termin ukończenia:
         <a th:text="${task.endTime}"></a>
-        .   Opis:
+        . Opis:
         <a th:text="${task.description}"></a>
-        .   Kategoria:
+        . Kategoria:
         <a th:text="${task.category}"></a>
-        .   Status zadania:
+        . Status zadania:
         <a th:text="${task.done}"></a>
 
 
@@ -63,7 +63,6 @@
     <input type="submit" value="Dodaj">
 
 </form>
-
 
 
 <!--
